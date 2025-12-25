@@ -5,3 +5,9 @@
 
 // Components
 @use "./style/components/header";
+@use "./style/components/tags";
+
+// Pages
+@use "./style/components/hero";
+@use "./style/components/about";
+@use "./style/components/skills";

@@ -1,3 +1,4 @@
+// LAYOUT
 .container {
   width: 100%;
   max-width: 1440px;
@@ -18,4 +19,88 @@
   @media (max-width: 480px) {
     max-width: 100%;
   }
+}
+
+section {
+  padding: clamp(1rem, 5vw, 5rem) 0;
+}
+
+// PRESSETS
+.green-bg {
+  color: var(--color-green-100);
+  background-color: var(--color-green-400);
+  border: 1px solid var(--color-green-100);
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-green-300);
+  }
+}
+
+.dark-bg {
+  background-color: var(--color-dark-200);
+  border: 1px solid var(--color-dark-400);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-dark-300);
+  }
+}
+
+.gradient-primary {
+  background: linear-gradient(90deg, #00e0b8 0%, #00c8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-secondary {
+  background: linear-gradient(90deg, #b983ff 0%, #ff7ad9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// TAGS
+.tag-d {
+  @extend .dark-bg;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.tag-g {
+  @extend .green-bg;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+// BUTTONS
+.btn {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-white-100);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  @extend .green-bg;
+}
+
+.btn-secondary {
+  @extend .dark-bg;
+}
+
+// TEXTS
+.text-p {
+  color: var(--color-white-200);
+}
+
+.text-t {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
 }

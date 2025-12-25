@@ -18,7 +18,140 @@
     ></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <span>Code by Serjay.</span>
+          </div>
+          <div class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#app" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#about" class="nav__link">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#skills" class="nav__link">Skills</a>
+              </li>
+              <li class="nav__item">
+                <a href="#projects" class="nav__link">Projects</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-secondary" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <div class="hero__wrapper container">
+            <div class="hero__content">
+              <span class="hero__content__str">Hello, I'm</span>
+              <h1 class="hero__content__title">Serjay Antsibor</h1>
+              <h2 class="hero__content__subtitle">
+                <span class="gradient-primary">Front-End Developer</span>
+                specializing in
+                <span class="gradient-secondary">Modern Web Applications</span>
+              </h2>
+              <p class="hero__content__description text-p">
+                I create minimal digital experiences with a strong focus on
+                clean code, modern JavaScript, and the MERN stack. I care deeply
+                about user experience and enjoy transforming ideas into
+                polished, functional products.
+              </p>
+            </div>
+            <div class="hero__cta">
+              <a href="#" class="btn btn-primary">View My Work</a>
+              <ul class="hero__list">
+                <li class="hero__list__item">
+                  <a href="#" class="hero__list__link"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li class="hero__list__item">
+                  <a href="#" class="hero__list__link"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="hero__list__item">
+                  <a href="#" class="hero__list__link"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="about__wrapper container">
+            <h2 class="about__title text-t">About Me</h2>
+
+            <div class="about__content">
+              <!-- LEFT -->
+              <div class="about__left">
+                <h3 class="about__subtitle">
+                  Passionate about creating digital experiences that matter
+                </h3>
+
+                <p class="about__description text-p">
+                  I’m a web developer focused on creating modern, user-friendly
+                  applications. I enjoy working across the stack and care a lot
+                  about writing clean, readable code that’s easy to maintain.
+                  <br /><br />
+                  Most of my work revolves around JavaScript, React, and the
+                  MERN stack. I like learning by building real projects,
+                  experimenting with new ideas, and constantly improving how I
+                  approach both development and design.
+                  <br /><br />
+                  Outside of coding, I spend time exploring new tools, refining
+                  my skills, and staying up to date with modern web
+                  technologies.
+                </p>
+
+                <ul class="about__tags">
+                  <li class="tag tag-g">Clean Code</li>
+                  <li class="tag tag-g">Team Player</li>
+                  <li class="tag tag-g">Continuous Learner</li>
+                  <li class="tag tag-g">Detail Oriented</li>
+                </ul>
+              </div>
+
+              <!-- RIGHT -->
+              <div class="about__right">
+                <!-- CARDS -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="skills" id="skills">
+          <div class="skills__wrapper container">
+            <div class="skills__hero">
+              <h2 class="skills__title text-t">Skills & Technologies</h2>
+              <p class="skills__subtitle text-p">
+                Here are the technologies and tools I use to bring ideas to life
+              </p>
+            </div>
+            <div class="skills__content">
+              <div class="skills__header">
+                <!-- CARDS -->
+              </div>
+              <div class="skills__footer">
+                <h3 class="skills__footer__title">Technologies I Work With</h3>
+                <ul class="skills__tags">
+                  <!-- TAGS -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
