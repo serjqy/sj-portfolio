@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  // Tablet
+  @media (max-width: 1024px) {
+    max-width: 992px;
+  }
+
+  // Big phone
+  @media (max-width: 768px) {
+    max-width: 736px;
+  }
+
+  // Small phone
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
+}
