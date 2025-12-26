@@ -10,6 +10,9 @@
     #080c14 75%,
     #000000 100%
   );
+  overflow: hidden;
+  position: relative;
+
   &__wrapper {
     // padding-top: 10rem;
     display: flex;
@@ -17,6 +20,8 @@
     flex-direction: column;
     justify-content: center;
     height: calc(100% - 70px);
+    position: relative;
+    z-index: 1;
   }
   &__content {
     text-align: center;
@@ -77,13 +82,26 @@
       }
     }
   }
-}
+  &__stars {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  &__star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: twinkle infinite ease-in-out;
+  }
 
-// background: linear-gradient(
-//   155deg,
-//   #000000 0%,
-//   #080c14 35%,
-//   #101828 50%,
-//   #080c14 65%,
-//   #000000 100%
-// );
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.9;
+    }
+  }
+}

@@ -3,6 +3,7 @@
   position: fixed;
   background-color: none;
   inset: 0 0 auto;
+  z-index: 1000;
   transition: all 0.3s ease-in-out;
 
   &__wrapper {
@@ -26,9 +27,8 @@
   }
 
   &.scrolled {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   }
 }
 

@@ -50,6 +50,7 @@
       </header>
       <main class="main">
         <section class="hero">
+          <div class="hero__stars"></div>
           <div class="hero__wrapper container">
             <div class="hero__content">
               <span class="hero__content__str">Hello, I'm</span>
@@ -67,7 +68,7 @@
               </p>
             </div>
             <div class="hero__cta">
-              <a href="#" class="btn btn-primary">View My Work</a>
+              <a href="#projects" class="btn btn-primary">View My Work</a>
               <ul class="hero__list">
                 <li class="hero__list__item">
                   <a href="https://github.com/serjqy" class="hero__list__link"
@@ -236,9 +237,10 @@
                       placeholder="Tell me about your project..."
                     ></textarea>
                   </div>
-                  <button class="btn btn-primary" id="btnForm">
+                  <button class="btn btn-primary" id="btnForm" type="submit">
                     Send Message
                   </button>
+                  <div class="form__errors"></div>
                 </form>
               </div>
               <div class="contact__right">
