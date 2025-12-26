@@ -4,11 +4,17 @@
 @use "./style/base/variables";
 
 // Components
-@use "./style/components/header";
 @use "./style/components/tags";
+@use "./style/components/form";
 
-// Pages
+// Header
+@use "./style/components/header";
+
+// Main
 @use "./style/components/hero";
 @use "./style/components/about";
 @use "./style/components/skills";
 @use "./style/components/projects";
+
+// Footer
+@use "./style/components/contact";
