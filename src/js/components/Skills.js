@@ -1,4 +1,4 @@
-import { skillsData } from "../DATA";
+import { skillsData } from "../data";
 
 const renderSkillsCards = (data, container) => {
   data.forEach(({ category, skills }) => {

@@ -54,3 +54,26 @@ export const skillsData = [
     ],
   },
 ];
+
+export const projectsData = [
+  {
+    image: "/PlanetZooSrc.png",
+    title: "Planet Zoo",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eius nostrum voluptate magni omnis inventore ad modi, provident eum id.",
+    gitLink: "https://github.com/serjqy/planetzoo-sae-assignment",
+    demoLink: "https://planet-zoo.netlify.app/",
+    tags: ["HTML", "SCSS", "JavaScript", "JQuery", "API"],
+    featured: true,
+  },
+  {
+    image: "/PlanetZooSrc.png",
+    title: "Planet Zoo",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eius nostrum voluptate magni omnis inventore ad modi, provident eum id.",
+    gitLink: "https://github.com/serjqy/planetzoo-sae-assignment",
+    demoLink: "https://planet-zoo.netlify.app/",
+    tags: ["HTML", "SCSS", "JavaScript"],
+    featured: false,
+  },
+];

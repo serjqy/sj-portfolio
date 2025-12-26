@@ -1,4 +1,4 @@
-import { aboutCardsData } from "../DATA";
+import { aboutCardsData } from "../data";
 
 export const initAboutCards = () => {
   const cardsContainer = document.querySelector(".about__right");

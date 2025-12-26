@@ -53,12 +53,12 @@ section {
 
 .gradient-primary {
   background: linear-gradient(90deg, #00e0b8 0%, #00c8ff 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .gradient-secondary {
   background: linear-gradient(90deg, #b983ff 0%, #ff7ad9 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
