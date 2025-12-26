@@ -61,6 +61,7 @@ export const initForm = () => {
         success.remove();
       }, 2000);
 
+      form.submit();
       form.reset();
     });
   });
