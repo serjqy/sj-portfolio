@@ -107,6 +107,7 @@
   }
   &-featured {
     transition: all 1s ease;
+    overflow: hidden;
     &.hidden {
       opacity: 0;
       filter: blur(5px);
@@ -120,6 +121,7 @@
   }
   &-other {
     transition: all 1s ease;
+    overflow: hidden;
     &.hidden {
       opacity: 0;
       filter: blur(5px);
