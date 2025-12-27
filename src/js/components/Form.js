@@ -5,64 +5,81 @@ export const initForm = () => {
   const messageRegex = /^[\s\S]{10,250}$/;
 
   const form = document.getElementById("form");
-  const errorBox = document.querySelector(".form__errors");
+
+  const fields = [
+    {
+      id: "firstName",
+      regex: nameRegex,
+      error: "First name is in invalid format",
+    },
+    {
+      id: "lastName",
+      regex: nameRegex,
+      error: "Last name is in invalid format",
+    },
+    {
+      id: "email",
+      regex: emailRegex,
+      error: "Email is in invalid format",
+    },
+    {
+      id: "subject",
+      regex: subjectRegex,
+      error: "Subject must be between 3 & 50 characters",
+    },
+    {
+      id: "message",
+      regex: messageRegex,
+      error: "Message must be between 10 & 250 characters",
+    },
+  ];
+
+  fields.forEach(({ id, regex, error }) => {
+    const input = document.getElementById(id);
+    const errorEl = input.closest(".form__field").querySelector(".form__error");
+
+    input.addEventListener("input", () => {
+      if (regex.test(input.value.trim())) {
+        errorEl.textContent = "";
+        return;
+      } else {
+        errorEl.textContent = error;
+      }
+    });
+  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    errorBox.innerHTML = "";
+    let isValid = true;
 
-    const inputFirstName = document.getElementById("firstName").value.trim();
-    const inputLastName = document.getElementById("lastName").value.trim();
-    const inputEmail = document.getElementById("email").value.trim();
-    const inputSubject = document.getElementById("subject").value.trim();
-    const inputMessage = document.getElementById("message").value.trim();
+    fields.forEach(({ id, regex, error }) => {
+      const input = document.getElementById(id);
+      const value = input.value.trim();
+      const errorEl = input
+        .closest(".form__field")
+        .querySelector(".form__error");
 
-    const errors = [];
+      errorEl.textContent = "";
 
-    if (!nameRegex.test(inputFirstName)) {
-      errors.push("First name is in invalid format");
-    }
-    if (!nameRegex.test(inputLastName)) {
-      errors.push("Last name is in invalid format");
-    }
+      if (!regex.test(value)) {
+        errorEl.textContent = error;
+        isValid = false;
+      }
+    });
 
-    if (!emailRegex.test(inputEmail)) {
-      errors.push("Email is in invalid format");
-    }
+    if (!isValid) return;
 
-    if (!subjectRegex.test(inputSubject)) {
-      errors.push("Subject must be between 3 & 50 characters");
-    }
-
-    if (!messageRegex.test(inputMessage)) {
-      errors.push("Message must be between 10 & 250 characters");
-    }
-    if (errors.length > 0) {
-      errors.forEach((error) => {
-        const mssg = document.createElement("p");
-        mssg.classList.add("error");
-        mssg.textContent = error;
-
-        errorBox.appendChild(mssg);
-      });
-      return;
-    }
     setTimeout(() => {
-      errorBox.innerHTML = "";
-
       const success = document.createElement("p");
-      success.classList.add("success");
+      success.classList.add("form__success");
       success.textContent = "Form has been successfully sent";
-
-      errorBox.appendChild(success);
-
+      form.appendChild(success);
       setTimeout(() => {
         success.remove();
-      }, 2000);
-
+      }, 3000);
       // form.submit();
       form.reset();
-    }, 500);
+    }, 0);
   });
 };

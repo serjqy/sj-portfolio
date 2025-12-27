@@ -51,15 +51,11 @@
     width: 100%;
     margin-bottom: 1rem;
   }
-  &__errors {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    .error {
-      color: rgb(224, 113, 113);
-    }
-    .success {
-      color: rgb(95, 211, 95);
-    }
+  &__error {
+    color: rgb(224, 113, 113);
+  }
+  &__success {
+    color: rgb(95, 211, 95);
+    text-align: center;
   }
 }
