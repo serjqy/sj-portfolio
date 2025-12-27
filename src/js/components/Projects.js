@@ -1,10 +1,11 @@
 import { projectsData } from "../data";
+import { animateItems } from "./Animation";
 
 const createProjectCard = (item, variant = "featured") => {
   const tagClass = variant === "featured" ? "tag-g" : "tag-d";
 
   const card = document.createElement("div");
-  card.classList.add("projects__card", "card", `card-${variant}`);
+  card.classList.add("card", "hidden", `card-${variant}`);
 
   card.innerHTML = `
     <div class="card__header">
@@ -44,6 +45,11 @@ export const initProjects = () => {
   const projectsFeatured = document.querySelector(".projects__featured");
   const projectsOther = document.querySelector(".projects__other");
 
+  if (!projectsFeatured) return;
   renderProjects(projectsData, projectsFeatured, "featured", (p) => p.featured);
+  animateItems(".card-featured");
+
+  if (!projectsOther) return;
   renderProjects(projectsData, projectsOther, "other", (p) => !p.featured);
+  animateItems(".card-other");
 };

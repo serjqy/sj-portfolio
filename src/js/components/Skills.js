@@ -1,4 +1,5 @@
 import { skillsData } from "../data";
+import { animateItems } from "./Animation";
 
 const renderSkillsCards = (data, container) => {
   data.forEach(({ category, skills }) => {
@@ -36,7 +37,8 @@ const animateSkillBars = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.width = entry.target.dataset.progress + "%";
-          observer.unobserve(entry.target);
+        } else {
+          entry.target.style.width = "0%";
         }
       });
     },
@@ -51,7 +53,7 @@ const renderSkillTags = (data, container) => {
 
   names.forEach((name) => {
     const tag = document.createElement("li");
-    tag.classList.add("tag", "tag-d");
+    tag.classList.add("tag", "tag-d", "hidden");
     tag.textContent = name;
     container.appendChild(tag);
   });
@@ -62,11 +64,10 @@ export const initSkillsCards = () => {
   const skillsTags = document.querySelector(".skills__tags");
 
   if (!skillsHeader) return;
-
   renderSkillsCards(skillsData, skillsHeader);
   animateSkillBars();
 
-  if (skillsTags) {
-    renderSkillTags(skillsData, skillsTags);
-  }
+  if (!skillsTags) return;
+  renderSkillTags(skillsData, skillsTags);
+  animateItems(".skills__tags .tag");
 };
